@@ -1,0 +1,77 @@
+@media screen and (min-width:960px) {
+    .container {
+        display : grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows : 100px 50px auto;
+        grid-template-areas: 
+            "header header header"
+            "menu menu menu"
+            "intro study project";
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:959px) {
+    .container {
+        display : grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows : 100px 50px auto;
+        grid-template-areas: 
+            "header header"
+            "menu menu"
+            "intro intro"
+            "study project";
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        display : grid;
+        grid-template-columns: 1fr;
+        grid-template-rows : 100px 50px auto;
+        grid-template-areas: 
+            "header"
+            "menu"
+            "intro"
+            "study"
+            "project";
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
+
+header {
+    text-align: center;
+    grid-area: header;
+    background-color: antiquewhite;
+}
+
+nav {
+    grid-area : menu;
+    background-color: azure;
+    text-align: center;
+}
+
+li {
+    display : inline-block;
+    width : 200px;
+}
+
+#intro {
+    grid-area: intro;
+    background-color: #e1ff39a6;
+}
+
+#study {
+    grid-area : study;
+    background-color: thistle;
+}
+
+#project {
+    grid-area : project;
+    background-color: rgba(178, 172, 255, 0.596);
+}
